@@ -22,6 +22,6 @@
 		<tr><th>進捗率</th><td><input type="text" name="status" value="{{$item->status}}"></td></tr>	
 	</table>
 	<button type="submit" formaction="/updateConfirm" formmethod="post">確認</button>
-	<button type="submit" formaction="/main" formmethod="get">戻る</button>
+	<button type="submit" formaction="/" formmethod="get">戻る</button>
 </form>
 @endsection

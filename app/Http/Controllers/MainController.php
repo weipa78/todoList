@@ -26,7 +26,7 @@ class MainController extends Controller
         $insert1 = $items->fill($form);
         $insert = $insert1->save();
 
-        return redirect('/main');
+        return redirect('/');
     }
     
     public function updateForm(Request $request)
@@ -53,7 +53,7 @@ class MainController extends Controller
         $itemOrigin = Item::find($request->id);
         $itemNew = $itemOrigin->fill($item)->save();
         
-        return redirect('/main');
+        return redirect('/');
     }
     
     public function deleteConfirm(Request $request)
@@ -65,6 +65,6 @@ class MainController extends Controller
     public function delete(Request $request)
     {
         Item::find($request->id)->delete();
-        return redirect('/main');
+        return redirect('/');
     }
 }
