@@ -16,3 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//一覧・新規登録入力ページの検索
+Route::get('/main', 'App\Http\Controllers\MainController@index');
+
+//一覧・新規登録入力ページの新規登録入力してトップページへリダイレクト
+Route::get('/indata', 'App\Http\Controllers\MainController@create');
+
+//更新入力ページへ遷移
+Route::post('/updateForm', 'App\Http\Controllers\MainController@updateForm');
+
+//更新確認ページへ遷移
+Route::post('/updateConfirm', 'App\Http\Controllers\MainController@updateConfirm');
+
+//更新してトップページへリダイレクト
+Route::post('/update', 'App\Http\Controllers\MainController@update');
+
+//削除確認ページへ遷移
+Route::post('/deleteConfirm', 'App\Http\Controllers\MainController@deleteConfirm');
+
+//削除してトップページへリダイレクト
+Route::get('/delete', 'App\Http\Controllers\MainController@delete');
+
