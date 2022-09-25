@@ -3,7 +3,7 @@
 @section('title', 'Todoリスト')
 
 @section('title1')
-	<h1>Todoリスト</h1>
+	<h1>Todoリストa</h1>
 @endsection
 
 @section('msg1')
