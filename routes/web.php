@@ -38,3 +38,7 @@ Route::post('/deleteConfirm', 'App\Http\Controllers\MainController@deleteConfirm
 //削除してトップページへリダイレクト
 Route::get('/delete', 'App\Http\Controllers\MainController@delete');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
